@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import appointment1 from '../../assets/appointment1.jpg';
-// import { useState } from "react";
 
 import { DayPicker, formatDay } from "react-day-picker";
 import "react-day-picker/style.css";
 
-const AppointmentBanner = () => {
-    const [selected, setSelected] = useState(new Date());
+const AppointmentBanner = ({date, setDate}) => {
+    
   return (
     <div class="hero bg-base-200 min-h-screen">
       <div class="hero-content flex-col lg:flex-row-reverse">
@@ -17,11 +16,9 @@ const AppointmentBanner = () => {
         <div>
           <DayPicker
           mode="single"
-          selected={selected}
-          onSelect={setSelected}
-          footer={
-            selected ? `Selected: ${selected.toLocaleDateString()}` : "Pick a day."
-          }
+          selected={date}
+          onSelect={setDate}
+          
           />
           
         </div>
