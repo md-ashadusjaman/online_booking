@@ -4,8 +4,8 @@ const Service = ({ service, setTreatment }) => {
   const { name, slots } = service;
   return (
     <div class="card bg-base-100 lg:max-w-lg shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title text-secondary">{name}</h2>
+      <div class="card-body text-center">
+        <h2 class="text-2xl font-bold text-secondary">{name}</h2>
         <p>
           {slots.length > 0 ? 
             <span>{slots[0]}</span>

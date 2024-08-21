@@ -9,14 +9,14 @@ const AvailableAppointments = ({ date }) => {
   const [treatment, setTreatment] = useState(null);
 
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/service")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
 
   return (
-    <div className="p-8">
-      <h4 className="text-5xl text-primary text-center font-bold">
+    <div className="">
+      <h4 className="text-3xl text-primary text-center font-bold my-12">
         Available date for appointment
         {date ? `: ${date.toLocaleDateString()}` : "Pick a day."}{" "}
       </h4>
